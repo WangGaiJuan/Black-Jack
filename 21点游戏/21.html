@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blackjack</title>
+    <link rel="stylesheet" type="text/css" href="css/21.css"/>
+	<script type="text/javascript" src="js/21.js"></script>
+</head>
+<body>
+<h1>BlackJack</h1>
+<div id="box">
+	<!--机器人庄家-->
+	<div id="robot">
+		<p>Dealer</p>
+		<div class="cardContainer" id="robotContainer">
+			<div class="child_con" id="robotOne"></div>
+			<div class="child_con" id="robotTwo"></div>
+			<div class="child_con" id="robotThree"></div>
+			<div class="child_con" id="robotFour"></div>
+			<div class="child_con" id="robotFive"></div>
+		</div>
+		<div class="sum" id="robotSum">0</div>
+		<span class="sumSpan">Sum</span>
+	</div>
+
+	<!--开始游戏-->
+	<div id="start"><p id="p1">开始游戏</p></div>
+	<!--按钮-->
+	<div id="btn">
+		<!--下注-->
+		<button type="button" id="bottomPour" class="btn01">下注</button>
+		<!--筹码-->
+		<div id="chip">
+			<button type="button" id="C100" value="100">$100</button>
+			<button type="button" id="C300" value="300">$300</button>
+			<button type="button" id="C800" value="800">$800</button>
+			<button type="button" id="C1000" value="1000">$1000</button>
+		</div>
+		<!--洗牌-->
+		<button type="button" id="shuffle" disabled="true" class="btn01">洗牌</button>
+		<!--保险-->
+		<button type="button" id="insurance" disabled="true" class="btn01">保险</button>
+		<div id="Alert">
+			<p>买保险？</p>
+			<input id="sub" type="submit" value="确定">
+			<input id="res" type="reset" value="取消">
+			</div>
+		<!--加牌-->
+		<button type="button" id="add" disabled="true" class="btn01">加牌
+		</button>
+		<!--停牌-->
+		<button type="button" id="stop" disabled="true" class="btn01">停牌</button>
+		<!--重玩-->
+		<button type="button" id="restart" class="btn01">重玩</button>
+	</div>
+
+	<!--玩家-->
+	<div id="you">
+		<div class="cardContainer" id="youContainer">
+			<div class="child_con" id="youOne"></div>
+			<div class="child_con" id="youTwo"></div>
+			<div class="child_con" id="youThree"></div>
+			<div class="child_con" id="youFour"></div>
+			<div class="child_con" id="youFive"></div>
+		</div>
+		<div class="sum" id="youSum">0</div>
+		<span class="sumSpan">Sum</span>
+		<p>You</p>
+	</div>
+
+	<!--链接游戏规则-->
+	<a id="a1" class="aa" href="http://www.360doc.com/content/10/0405/18/1147660_21711541.shtml" target="_blank">游戏规则</a>
+	<!--money-->
+	<div class="sm" id="money">
+		<p>Cash</p>
+		<span>10000</span>
+	</div>
+	<!--显示倍数-->
+	<div class="sm" id="show">
+		<p>Bet</p>
+		<span>0</span>	
+	</div>
+	<!--扑克-->
+	<div id="playingCard"></div>
+</div>
+</body>
+</html>
